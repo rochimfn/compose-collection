@@ -1,0 +1,20 @@
+version: '3'
+services:
+  db:
+    container_name: mssql-2019
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    restart: always
+    ports: 
+      - "1433:1433"
+    environment:
+      - SA_PASSWORD=AEdCC.b9
+      - ACCEPT_EULA=Y
+    volumes:
+      - mssql-data:/var/opt/mssql
+volumes:
+  mssql-data:
+
+networks: 
+  default: 
+    external: 
+      name: database
