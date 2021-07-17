@@ -22,3 +22,39 @@ docker-compose up -d
 cd postgres
 docker-compose down
 ```
+
+## Daftar layanan
+
+### `adminer`
+
+* port diekspose: `8070`
+
+### `mssql`
+
+* port diekspose: `1433`
+* username: `sa`
+* password: `AEdCC.b9`
+
+### `mysql`
+
+* port diekspose: `3306`
+* username: `root`
+* password: `password`
+
+### `neo4j`
+
+* port diekspose(client): `7474`
+* port diekspose(server): `7687`
+* username: `neo4j`
+* password: `password`
+
+### `postgres`
+
+* pgadmin
+    * port diekspose: `8060`
+    * email: `rochim@localhost`
+    * password: `password`
+* postgres
+    * port diekspose: `5432`
+    * username: `admin`
+    * password: `password`
