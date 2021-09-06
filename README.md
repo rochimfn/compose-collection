@@ -29,6 +29,12 @@ docker-compose down
 
 * port diekspose: `8070`
 
+### `mariadb`
+
+* port diekspose: `3306`
+* username: `root`
+* password: `password`
+
 ### `mssql`
 
 * port diekspose: `1433`
