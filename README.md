@@ -35,6 +35,13 @@ docker-compose down
 * username: `root`
 * password: `password`
 
+### `mongo`
+
+* port diekspose(client): `8081`
+* port diekspose(server): `27017`
+* username: `admin`
+* password: `password`
+
 ### `mssql`
 
 * port diekspose: `1433`
