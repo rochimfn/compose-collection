@@ -76,5 +76,5 @@ docker-compose down
 
 * port diekspose(client): `15672`
 * port diekspose(server): `5672`
-* username: `neo4j`
-* password: `password`
+* username: `guest`
+* password: `guest`
