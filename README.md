@@ -29,6 +29,11 @@ docker-compose down
 
 * port diekspose: `8070`
 
+### `elasticsearch & kibana`
+
+* port diekspose(kibana): `5601`
+* port diekspose(elasticsearch): `9200`, `9300`
+
 ### `mariadb`
 
 * port diekspose: `3306`
