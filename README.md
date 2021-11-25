@@ -33,6 +33,8 @@ docker-compose down
 
 * port diekspose(kibana): `5601`
 * port diekspose(elasticsearch): `9200`, `9300`
+* username: `elastic`
+* password: `password`
 
 ### `mariadb`
 
@@ -83,3 +85,7 @@ docker-compose down
 * port diekspose(server): `5672`
 * username: `guest`
 * password: `guest`
+
+### `zeppelin`
+
+* port diekspose: `8080`
