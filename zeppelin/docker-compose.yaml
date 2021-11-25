@@ -1,0 +1,25 @@
+version: '3'
+services:
+  zeppelin:
+    image: apache/zeppelin:0.10.0
+    hostname: zeppelin
+    container_name: zeppelin
+    restart: always
+    ports:
+      - 8080:8080
+    environment:
+      - ZEPPELIN_LOG_DIR='/logs'
+      - ZEPPELIN_NOTEBOOK_DIR='/notebook'
+    volumes:
+      - logs:/data
+      - notebook:/notebook
+volumes:
+  logs:
+    driver: local
+  notebook:
+    driver: local
+
+networks:
+  default:
+    external:
+      name: database
