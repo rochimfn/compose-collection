@@ -68,6 +68,18 @@ docker-compose down
 * username: `neo4j`
 * password: `password`
 
+### `openldap`
+
+* openldap
+    * port diekspose: `389`
+    * port diekspose: `636`
+    * login admin: `cn=admin,dc=example,dc=org`
+    * login readonly: `cn=readonly,dc=example,dc=org`
+    * password: `password`
+* phpLDAPadmin
+    * port diekspose: `6443`
+
+
 ### `postgres`
 
 * pgadmin
