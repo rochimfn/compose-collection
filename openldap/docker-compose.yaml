@@ -28,8 +28,8 @@ services:
       - openldap
 
 volumes:
-  odfe-data1:
-  odfe-data2:
+  ldap-data:
+  ldap-config:
 
 networks:
   openldap:
