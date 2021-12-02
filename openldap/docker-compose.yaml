@@ -1,0 +1,35 @@
+version: '3'
+services:
+  openldap:
+    image: osixia/openldap:1.5.0
+    container_name: openldap
+    command: --copy-service
+    ports:
+      - 389:389
+      - 636:636
+    environment:
+      - LDAP_ADMIN_PASSWORD=password
+      - LDAP_READONLY_USER=true
+      - LDAP_READONLY_USER_PASSWORD=password
+    volumes:
+      - ldap-data:/var/lib/ldap
+      - ldap-config:/etc/ldap/slapd.d
+    networks:
+      - openldap
+
+  openldap-admin:
+    image: osixia/phpldapadmin:0.9.0
+    container_name: openldap-admin
+    ports:
+      - 6443:443
+    environment:
+      - PHPLDAPADMIN_LDAP_HOSTS=openldap
+    networks:
+      - openldap
+
+volumes:
+  odfe-data1:
+  odfe-data2:
+
+networks:
+  openldap:
