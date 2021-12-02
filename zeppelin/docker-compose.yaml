@@ -11,9 +11,12 @@ services:
       - ZEPPELIN_LOG_DIR='/logs'
       - ZEPPELIN_NOTEBOOK_DIR='/notebook'
     volumes:
+      - conf:/opt/zeppelin/conf
       - logs:/data
       - notebook:/notebook
 volumes:
+  conf:
+    driver: local
   logs:
     driver: local
   notebook:

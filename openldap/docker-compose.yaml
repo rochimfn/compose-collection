@@ -14,6 +14,7 @@ services:
     volumes:
       - ldap-data:/var/lib/ldap
       - ldap-config:/etc/ldap/slapd.d
+      - ./directory.ldif:/container/service/slapd/assets/config/bootstrap/ldif/custom/directory.ldif
     networks:
       - openldap
 
