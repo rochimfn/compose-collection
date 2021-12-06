@@ -7,13 +7,10 @@ services:
     restart: always
     ports:
       - 8080:8080
-    environment:
-      - ZEPPELIN_LOG_DIR='/logs'
-      - ZEPPELIN_NOTEBOOK_DIR='/notebook'
     volumes:
       - conf:/opt/zeppelin/conf
-      - logs:/data
-      - notebook:/notebook
+      - logs:/opt/zeppelin/logs
+      - notebook:/opt/zeppelin/notebook
 volumes:
   conf:
     driver: local
