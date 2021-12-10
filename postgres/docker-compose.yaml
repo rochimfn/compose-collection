@@ -18,6 +18,7 @@ services:
   db:
     image: postgres:10
     restart: always
+    command: -c wal_level=logical
     ports: 
       - "5432:5432"
     environment:
