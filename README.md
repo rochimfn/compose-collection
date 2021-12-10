@@ -38,17 +38,29 @@ docker-compose down
 
 ### `debezium (with kafka)`
 
+* connect
+    * port diekspose: `8083`
+* kafka
+    * port diekspose: `9092`
+* kafka-ui
+    * port diekspose: `3300`
 * zookeeper
     * port diekspose: `2181`
     * port diekspose: `2888`
     * port diekspose: `3888`
-* kafka
-    * port diekspose: `9092`
-* connect
-    * port diekspose: `8083`
-* kafka-ui
-    * port diekspose: `3300`
-    
+
+### `debezium-server with pulsar`
+
+* debezium
+    * port diekspose: `8080`
+    * **atur konfigurasi !!!**: `conf/application.properties`
+* pulsar
+    * port diekspose: `6650`
+    * port diekspose: `7080`
+* pulsar-manager
+    * port diekspose: `9527`
+    * port diekspose: `7750`
+    * **atur admin !!!**: `[https://pulsar.apache.org/docs/en/administration-pulsar-manager/#set-administrator-account-and-password](https://pulsar.apache.org/docs/en/administration-pulsar-manager/#set-administrator-account-and-password)`
 
 ### `mariadb`
 

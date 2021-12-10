@@ -1,0 +1,44 @@
+version: '3'
+services:
+  debezium:
+    image: debezium/server
+    restart: always
+    ports:
+      - "8080:8080"
+    volumes:
+      - debezium-data:/debezium/data
+      - ./conf:/debezium/conf
+    depends_on:
+      - pulsar
+
+  pulsar:
+    image: apachepulsar/pulsar:2.5.2
+    restart: always
+    ports: 
+      - "6650:6650"
+      - "7080:8080"
+    command: bin/pulsar standalone
+    volumes:
+      - pulsar-data:/pulsar/data
+  
+  pulsar-manager:
+    image: apachepulsar/pulsar-manager:v0.2.0
+    restart: always
+    ports:
+      - "9527:9527"
+      - "7750:7750"
+    depends_on:
+      - pulsar
+    environment:
+      SPRING_CONFIGURATION_FILE: /pulsar-manager/pulsar-manager/application.properties 
+
+volumes:
+  debezium-data:
+  debezium-conf:
+  pulsar-data:
+
+
+networks: 
+  default: 
+    external: 
+      name: database
