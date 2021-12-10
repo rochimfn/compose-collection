@@ -53,14 +53,14 @@ docker-compose down
 
 * debezium
     * port diekspose: `8080`
-    * **atur konfigurasi !!!**: `conf/application.properties`
+    * **atur konfigurasi dulu !!!**: `conf/application.properties`
 * pulsar
     * port diekspose: `6650`
     * port diekspose: `7080`
 * pulsar-manager
     * port diekspose: `9527`
     * port diekspose: `7750`
-    * **atur admin !!!**: `[https://pulsar.apache.org/docs/en/administration-pulsar-manager/#set-administrator-account-and-password](https://pulsar.apache.org/docs/en/administration-pulsar-manager/#set-administrator-account-and-password)`
+    * **atur akun admin dulu !!!**: [https://pulsar.apache.org/docs/en/administration-pulsar-manager/#set-administrator-account-and-password](https://pulsar.apache.org/docs/en/administration-pulsar-manager/#set-administrator-account-and-password)
 
 ### `mariadb`
 
