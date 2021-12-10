@@ -36,6 +36,20 @@ docker-compose down
 * username: `elastic`
 * password: `password`
 
+### `debezium (with kafka)`
+
+* zookeeper
+    * port diekspose: `2181`
+    * port diekspose: `2888`
+    * port diekspose: `3888`
+* kafka
+    * port diekspose: `9092`
+* connect
+    * port diekspose: `8083`
+* kafka-ui
+    * port diekspose: `3300`
+    
+
 ### `mariadb`
 
 * port diekspose: `3306`

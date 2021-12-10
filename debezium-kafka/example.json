@@ -1,0 +1,14 @@
+{
+  "name": "dev-connector",  
+  "config": {
+    "connector.class": "io.debezium.connector.postgresql.PostgresConnector", 
+    "database.hostname": "db", 
+    "database.port": "5432", 
+    "database.user": "admin", 
+    "database.password": "password", 
+    "database.dbname" : "dev", 
+    "database.server.name": "pg-logical", 
+    "schema.include.list": "tmp",
+    "plugin.name": "pgoutput"
+  }
+}

@@ -1,0 +1,75 @@
+version: '3'
+services:
+  zookeeper:
+    image: debezium/zookeeper:1.7
+    restart: always
+    ports:
+      - "2181:2181"
+      - "2888:2888"
+      - "3888:3888"
+    volumes:
+      - zookeeper-data:/zookeeper/data
+      - zookeeper-txns:/zookeeper/txns
+      - zookeeper-logs:/zookeeper/logs
+      - zookeeper-conf:/zookeeper/conf
+
+  kafka:
+    image: debezium/kafka:1.7
+    restart: always
+    ports: 
+      - "9092:9092"
+    environment:
+      - ZOOKEEPER_CONNECT=zookeeper:2181
+    depends_on: 
+      - zookeeper
+    volumes:
+      - kafka-data:/kafka/data
+      - kafka-logs:/kafka/logs
+      - kafka-config:/kafka/config
+
+  connect:
+    image: debezium/connect:1.7
+    restart: always
+    ports: 
+      - "8083:8083"
+    environment:
+      - GROUP_ID=1
+      - BOOTSTRAP_SERVERS=kafka:9092
+      - CONFIG_STORAGE_TOPIC=rc_connect_configs
+      - OFFSET_STORAGE_TOPIC=rc_connect_offsets
+      - STATUS_STORAGE_TOPIC=rc_connect_statuses
+    depends_on: 
+      - zookeeper
+      - kafka
+    volumes:
+      - connect-logs:/kafka/logs
+      - connect-config:/kafka/config
+
+  kafka-ui:
+    image: provectuslabs/kafka-ui:latest
+    restart: always
+    ports: 
+      - "3300:8080"
+    environment:
+      - KAFKA_CLUSTERS_0_NAME=local 
+      - KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS=kafka:9092 
+      - KAFKA_CLUSTERS_0_ZOOKEEPER=zookeeper:2181
+    depends_on: 
+      - kafka
+
+volumes:
+  zookeeper-data:
+  zookeeper-txns:
+  zookeeper-logs:
+  zookeeper-conf:
+  kafka-data:
+  kafka-logs:
+  kafka-config:
+  connect-logs:
+  connect-config:
+
+
+networks: 
+  default: 
+    external: 
+      name: database
