@@ -1,0 +1,20 @@
+version: '3'
+services:
+  jupyterlab:
+    build: ./jupyterlab
+    ports:
+      - "8888:8888"
+    volumes:
+      - jupyterlab-data:/opt/app/data
+    entrypoint: sh -c "jupyter lab --ip=0.0.0.0 --port=8888 --no-browser
+      --notebook-dir=/opt/app/data --allow-root --NotebookApp.token=''
+      --NotebookApp.password=''"
+
+volumes:
+  jupyterlab-data:
+
+    null
+networks:
+  default:
+    external:
+      name: database
