@@ -94,6 +94,13 @@ docker-compose down
 * username: `neo4j`
 * password: `password`
 
+### `opendistro elasticsearch & kibana`
+
+* port diekspose(kibana): `5601`
+* port diekspose(elasticsearch): `9200`, `9600`
+* username: `admin`
+* password: `admin`
+
 ### `openldap`
 
 * openldap

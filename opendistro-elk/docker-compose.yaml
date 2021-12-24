@@ -1,0 +1,34 @@
+version: '3'
+services:
+  odfe:
+    image: amazon/opendistro-for-elasticsearch:1.13.3
+    container_name: odfe
+    environment:
+      - discovery.type=single-node
+      - bootstrap.memory_lock=true
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m" 
+    volumes:
+      - odfe-data:/usr/share/elasticsearch/data
+    ports:
+      - 9200:9200
+      - 9600:9600
+    networks:
+      - odfe-net
+  kibana:
+    image: amazon/opendistro-for-elasticsearch-kibana:latest
+    container_name: ofde-kibana
+    ports:
+      - 5601:5601
+    expose:
+      - "5601"
+    environment:
+      - ELASTICSEARCH_URL=https://odfe:9200
+      - ELASTICSEARCH_HOSTS=https://odfe:9200
+    networks:
+      - odfe-net
+
+volumes:
+  odfe-data:
+
+networks:
+  odfe-net:
