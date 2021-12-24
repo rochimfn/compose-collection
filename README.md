@@ -131,6 +131,10 @@ docker-compose down
 * username: `guest`
 * password: `guest`
 
+### `tika`
+
+* port diekspose: `9998`
+
 ### `zeppelin`
 
 * port diekspose: `8080`
