@@ -131,6 +131,11 @@ docker-compose down
 * username: `guest`
 * password: `guest`
 
+### `redis`
+
+* redis
+    * port diekspose: `6379`
+
 ### `tika`
 
 * port diekspose: `9998`
