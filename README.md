@@ -162,4 +162,5 @@ docker-compose down
 
 ### `zeppelin`
 
-* port diekspose: `8080`
+* port diekspose(server): `8080`
+* port diekspose(spark): `4040`
