@@ -136,6 +136,26 @@ docker-compose down
 * redis
     * port diekspose: `6379`
 
+### `superset`
+
+* superset
+    * port diekspose: `8088`
+    * manual provision: 
+    ```bash
+    docker-compose exec superset superset fab create-admin \
+                --username admin \
+                --firstname Superset \
+                --lastname Admin \
+                --email admin@superset.com \
+                --password admin
+
+    docker-compose exec superset superset db upgrade
+
+    docker-compose exec superset superset load_examples
+
+    docker-compose exec superset superset init
+    ```
+
 ### `tika`
 
 * port diekspose: `9998`

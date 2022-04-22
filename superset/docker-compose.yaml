@@ -1,0 +1,18 @@
+version: '3'
+services:
+  superset:
+    build: ./superset-build
+    image: rochimfn/superset:v0.1
+    restart: always
+    ports:
+      - "8088:8088"
+    volumes:
+      - superset-home:/app/superset_home
+
+volumes:
+  superset-home:
+
+networks:
+  default:
+    external:
+      name: database
