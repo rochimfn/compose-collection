@@ -62,6 +62,10 @@ docker-compose down
     * port diekspose: `7750`
     * **atur akun admin dulu !!!**: [https://pulsar.apache.org/docs/en/administration-pulsar-manager/#set-administrator-account-and-password](https://pulsar.apache.org/docs/en/administration-pulsar-manager/#set-administrator-account-and-password)
 
+### `julia`
+
+* port diekspose: `8888`
+
 ### `mariadb`
 
 * port diekspose: `3306`
