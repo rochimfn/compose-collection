@@ -121,7 +121,7 @@ docker-compose down
 
 * pgadmin
     * port diekspose: `8060`
-    * email: `rochim@localhost`
+    * email: `rochim@localhost.localhost`
     * password: `password`
 * postgres
     * port diekspose: `5432`
