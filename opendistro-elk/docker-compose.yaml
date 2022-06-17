@@ -2,7 +2,6 @@ version: '3'
 services:
   odfe:
     image: amazon/opendistro-for-elasticsearch:1.13.3
-    container_name: odfe
     environment:
       - discovery.type=single-node
       - bootstrap.memory_lock=true
@@ -16,7 +15,6 @@ services:
       - odfe-net
   kibana:
     image: amazon/opendistro-for-elasticsearch-kibana:latest
-    container_name: ofde-kibana
     ports:
       - 5601:5601
     expose:

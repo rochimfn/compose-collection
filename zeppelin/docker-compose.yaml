@@ -3,7 +3,6 @@ services:
   zeppelin:
     image: apache/zeppelin:0.10.0
     hostname: zeppelin
-    container_name: zeppelin
     restart: always
     ports:
       - 8080:8080

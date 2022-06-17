@@ -1,7 +1,6 @@
 version: '3'
 services:
   db:
-    container_name: mssql-2019
     image: mcr.microsoft.com/mssql/server:2019-latest
     restart: always
     ports: 
