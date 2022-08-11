@@ -1,4 +1,5 @@
 # Koleksi `docker-compose`
+*English version: https://github.com/rochimfn/compose-collection/blob/main/README.en.md*
 
 ## Tentang
 Koleksi konfigurasi docker-compose untuk keperluan belajar dan pengembangan.
