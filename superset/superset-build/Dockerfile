@@ -4,6 +4,6 @@ USER root
 
 RUN apt update
 RUN apt install -y libsasl2-dev libldap2-dev
-RUN pip install --no-cache-dir apache-superset[hana] cx_Oracle  psycopg2-binary python-ldap 
+RUN pip install --no-cache-dir psycopg2-binary pymssql mysqlclient
 
 USER superset
