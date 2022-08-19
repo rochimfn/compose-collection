@@ -11,7 +11,7 @@ services:
       - conf:/opt/zeppelin/conf
       - logs:/opt/zeppelin/logs
       - notebook:/opt/zeppelin/notebook
-      - repo:/opt/zeppelin/local-repo
+      - ./repo:/opt/zeppelin/local-repo
     environment:
       - ZEPPELIN_NOTEBOOK_CRON_ENABLE=true
       - ZEPPELIN_METRIC_ENABLE_PROMETHEUS=true
@@ -22,8 +22,6 @@ volumes:
   logs:
     driver: local
   notebook:
-    driver: local
-  repo:
     driver: local
 
 networks:
