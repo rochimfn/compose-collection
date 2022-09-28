@@ -122,7 +122,7 @@ docker-compose down
 
 * pgadmin
     * exposed ports: `8060`
-    * email: `rochim@localhost.localhost`
+    * email: `admin@local.dev`
     * password: `password`
 * postgres
     * exposed ports: `5432`
