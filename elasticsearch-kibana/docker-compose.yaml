@@ -9,6 +9,7 @@ services:
       - "ES_JAVA_OPTS=-Xms2g -Xmx2g"
       - ELASTIC_PASSWORD=password
       - xpack.security.enabled=true
+      - xpack.security.authc.api_key.enabled=true
     ulimits:
       memlock:
         soft: -1
@@ -31,6 +32,19 @@ services:
       - 5601:5601
     networks:
       - elastic
+  apm-server:
+      image: docker.elastic.co/apm/apm-server:7.15.2
+      ports:
+        - 8200:8200
+      volumes:
+        - ./apm-server.yml:/usr/share/apm-server/apm-server.yml
+      depends_on:
+        - elasticsearch
+      links:
+        - elasticsearch
+        - kibana
+      networks:
+        - elastic
 
 volumes:
   esdata:
