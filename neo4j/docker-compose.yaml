@@ -3,15 +3,22 @@ services:
   neo4j:
     image: neo4j:4.4-community
     hostname: neo4j
+    mem_limit: 4g
+    cpus: 2
     restart: always
     ports:
       - "7474:7474"
       - "7687:7687"
     environment:
       - NEO4J_AUTH=neo4j/password
+      - NEO4J_apoc_export_file_enabled=true
+      - NEO4J_apoc_import_file_enabled=true
+      - NEO4J_apoc_import_file_use__neo4j__config=true
+      - NEO4JLABS_PLUGINS=["apoc"]
     volumes:
       - neo4j-data:/data
       - neo4j-plugins:/plugins
+      - ../zeppelin/shared:/import
 volumes:
   neo4j-data:
   neo4j-plugins:
