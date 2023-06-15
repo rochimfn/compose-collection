@@ -10,7 +10,7 @@ services:
     volumes:
       - conf:/opt/zeppelin/conf
       - logs:/opt/zeppelin/logs
-      - notebook:/opt/zeppelin/notebook
+      - ./notebook:/opt/zeppelin/notebook
       - ./repo:/opt/zeppelin/local-repo
       - ./shared:/opt/zeppelin/shared
     environment:
