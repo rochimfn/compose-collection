@@ -1,0 +1,50 @@
+version: '3'
+services:
+  hiveserver2:
+    image: apache/hive:4.0.0-alpha-2
+    restart: always
+    ports: 
+      - "10000:10000" 
+      - "10002:10002"
+    environment:
+      SERVICE_NAME: hiveserver2 
+      SERVICE_OPTS: "-Dhive.metastore.uris=thrift://metastore:9083"
+      IS_RESUME: "true"
+    volumes:
+      - hive-data:/opt/hive/data/warehouse
+    depends_on: 
+      - metastore
+
+  metastore:
+    image: apache/hive:4.0.0-alpha-2
+    restart: always
+    ports:
+      - "9083:9083"
+    environment:
+      SERVICE_NAME: metastore
+      DB_DRIVER: postgres
+      SERVICE_OPTS: "-Djavax.jdo.option.ConnectionDriverName=org.postgresql.Driver -Djavax.jdo.option.ConnectionURL=jdbc:postgresql://pgmetastore:5432/metastore_db -Djavax.jdo.option.ConnectionUserName=hive -Djavax.jdo.option.ConnectionPassword=password"
+    volumes:
+      - hive-data:/opt/hive/data/warehouse
+    depends_on: 
+      - pgmetastore
+
+  pgmetastore:
+    image: postgres:14
+    restart: always
+    environment:
+      - POSTGRES_DB=metastore_db
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_USER=hive
+      - PGDATA=/var/lib/postgresql/data/pgdata
+    volumes:
+      - postgres-data:/var/lib/postgresql/data/pgdata
+
+volumes:
+  postgres-data:
+  hive-data:
+
+networks: 
+  default: 
+    external: 
+      name: database

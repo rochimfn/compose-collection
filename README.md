@@ -63,6 +63,17 @@ docker-compose down
     * port diekspose: `7750`
     * **atur akun admin dulu !!!**: [https://pulsar.apache.org/docs/en/administration-pulsar-manager/#set-administrator-account-and-password](https://pulsar.apache.org/docs/en/administration-pulsar-manager/#set-administrator-account-and-password)
 
+### `hive`
+
+* hiveserver2
+    * port diekspose (hiveserver2): `10000`
+    * port diekspose (hiveserver2 Web UI): `10002`
+    * jdbc: `jdbc:hive2://localhost:10000/root`
+    * beeline (docker): `docker exec -it hive-hiveserver2-1 beeline -u 'jdbc:hive2://localhost:10000/'`
+    * beeline (eksternal): `beeline -u 'jdbc:hive2://localhost:10000/'`
+* metastore
+    * port diekspose: `9083`
+
 ### `julia`
 
 * port diekspose: `8888`

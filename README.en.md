@@ -67,6 +67,16 @@ docker-compose down
 
 * exposed ports: `8888`
 
+### `hive`
+* hiveserver2
+    * exposed ports (hiveserver2): `10000`
+    * exposed ports (hiveserver2 Web UI): `10002`
+    * jdbc: `jdbc:hive2://localhost:10000/root`
+    * beeline (docker): `docker exec -it hive-hiveserver2-1 beeline -u 'jdbc:hive2://localhost:10000/'`
+    * beeline (eksternal): `beeline -u 'jdbc:hive2://localhost:10000/'`
+* metastore
+    * port diekspose: `9083`
+
 ### `mariadb`
 
 * exposed ports: `3306`
