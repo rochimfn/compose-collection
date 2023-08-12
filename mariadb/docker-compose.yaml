@@ -12,7 +12,7 @@ services:
 volumes:
   mariadb-data:
 
-networks: 
-  default: 
-    external: 
-      name: database
+networks:
+  default:
+    name: database
+    external: true

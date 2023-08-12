@@ -13,8 +13,7 @@ services:
 volumes:
   jupyterlab-data:
 
-    null
 networks:
   default:
-    external:
-      name: database
+    name: database
+    external: true

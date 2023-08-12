@@ -68,8 +68,7 @@ volumes:
   connect-logs:
   connect-config:
 
-
-networks: 
-  default: 
-    external: 
-      name: database
+networks:
+  default:
+    name: database
+    external: true

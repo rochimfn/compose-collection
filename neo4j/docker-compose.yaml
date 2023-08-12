@@ -23,8 +23,8 @@ volumes:
   neo4j-data:
   neo4j-plugins:
 
-networks: 
-  default: 
-    external: 
-      name: database
+networks:
+  default:
+    name: database
+    external: true
 

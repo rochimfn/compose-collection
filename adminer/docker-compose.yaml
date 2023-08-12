@@ -5,7 +5,8 @@ services:
     restart: always
     ports: 
       - "8070:8080"
-networks: 
-  default: 
-    external: 
-      name: database
+
+networks:
+  default:
+    name: database
+    external: true

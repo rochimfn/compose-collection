@@ -15,7 +15,7 @@ volumes:
   rabbitmq-data:
   rabbitmq-log:
 
-networks: 
-  default: 
-    external: 
-      name: database
+networks:
+  default:
+    name: database
+    external: true

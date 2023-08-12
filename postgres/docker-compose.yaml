@@ -34,8 +34,8 @@ volumes:
   postgres-backup:
   pgadmin-data:
 
-networks: 
-  default: 
-    external: 
-      name: database
+networks:
+  default:
+    name: database
+    external: true
 
