@@ -2,10 +2,11 @@ apm-server:
   host: apm-server:8200
   frontend.enabled: true
   frontend.allow_origins: "*"
+  apm-server.kibana.enabled: true
+  apm-server.kibana.host: http://kibana:5601
 
 output.elasticsearch:
   enabled: true
   hosts: ["elasticsearch"]
-
-setup.kibana:
-  host: "kibana"
+  username: "elastic"
+  password: "password"
