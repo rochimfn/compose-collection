@@ -152,6 +152,18 @@ docker-compose down
 * redis
     * port diekspose: `6379`
 
+### `redpanda`
+
+* broker
+    * port diekspose(schema-registry): `18081`
+    * port diekspose(pandaproxy): `18082`
+    * port diekspose(broker): `19092`
+    * port diekspose(admin api): `19644`
+* console
+    * port diekspose: `8080`
+* connect
+    * port diekspose: `8083`
+
 ### `superset`
 
 * superset

@@ -151,6 +151,18 @@ docker-compose down
 * redis
     * exposed ports: `6379`
 
+### `redpanda`
+
+* broker
+    * exposed ports(schema-registry): `18081`
+    * exposed ports(pandaproxy): `18082`
+    * exposed ports(broker): `19092`
+    * exposed ports(admin api): `19644`
+* console
+    * exposed ports: `8080`
+* connect
+    * exposed ports: `8083`
+
 ### `superset`
 
 * superset
