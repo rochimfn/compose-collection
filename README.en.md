@@ -30,11 +30,10 @@ docker-compose down
 
 * exposed ports: `8070`
 
-### `elasticsearch & kibana`
+### `db2 community edition`
 
-* exposed ports(kibana): `5601`
-* exposed ports(elasticsearch): `9200`, `9300`
-* username: `elastic`
+* exposed ports: `50000`
+* username: `db2inst1`
 * password: `password`
 
 ### `debezium (with kafka)`
@@ -63,9 +62,12 @@ docker-compose down
     * exposed ports: `7750`
     * **set up admin account first !!!**: [https://pulsar.apache.org/docs/en/administration-pulsar-manager/#set-administrator-account-and-password](https://pulsar.apache.org/docs/en/administration-pulsar-manager/#set-administrator-account-and-password)
 
-### `julia`
+### `elasticsearch & kibana`
 
-* exposed ports: `8888`
+* exposed ports(kibana): `5601`
+* exposed ports(elasticsearch): `9200`, `9300`
+* username: `elastic`
+* password: `password`
 
 ### `hive`
 * hiveserver2
@@ -76,6 +78,10 @@ docker-compose down
     * beeline (eksternal): `beeline -u 'jdbc:hive2://localhost:10000/'`
 * metastore
     * port diekspose: `9083`
+
+### `julia`
+
+* exposed ports: `8888`
 
 ### `mariadb`
 

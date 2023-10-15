@@ -30,11 +30,10 @@ docker-compose down
 
 * port diekspose: `8070`
 
-### `elasticsearch & kibana`
+### `db2 community edition`
 
-* port diekspose(kibana): `5601`
-* port diekspose(elasticsearch): `9200`, `9300`
-* username: `elastic`
+* port diekspose: `50000`
+* username: `db2inst1`
 * password: `password`
 
 ### `debezium (with kafka)`
@@ -62,6 +61,13 @@ docker-compose down
     * port diekspose: `9527`
     * port diekspose: `7750`
     * **atur akun admin dulu !!!**: [https://pulsar.apache.org/docs/en/administration-pulsar-manager/#set-administrator-account-and-password](https://pulsar.apache.org/docs/en/administration-pulsar-manager/#set-administrator-account-and-password)
+
+### `elasticsearch & kibana`
+
+* port diekspose(kibana): `5601`
+* port diekspose(elasticsearch): `9200`, `9300`
+* username: `elastic`
+* password: `password`
 
 ### `hive`
 
