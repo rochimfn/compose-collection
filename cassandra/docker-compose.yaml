@@ -1,0 +1,16 @@
+version: '3'
+services:
+  cassandra:
+    image: cassandra:4
+    restart: always
+    ports: 
+      - "9042:9042"
+    volumes:
+      - cassandra-data:/var/lib/cassandra
+volumes:
+  cassandra-data:
+
+networks:
+  default:
+    name: database
+    external: true

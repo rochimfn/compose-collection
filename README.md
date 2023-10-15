@@ -30,6 +30,11 @@ docker-compose down
 
 * port diekspose: `8070`
 
+### `cassandra`
+
+* cassandra
+    * port diekspose: `9042`
+
 ### `db2 community edition`
 
 * port diekspose: `50000`
