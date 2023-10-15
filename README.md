@@ -170,6 +170,11 @@ docker-compose down
 * connect
     * port diekspose: `8083`
 
+### `scylla`
+
+* scylla
+    * port diekspose: `9042`
+
 ### `superset`
 
 * superset

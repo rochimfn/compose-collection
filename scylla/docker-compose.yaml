@@ -1,0 +1,17 @@
+version: '3'
+services:
+  scylla:
+    image: scylladb/scylla
+    restart: always
+    command: --smp 1 --developer-mode=1
+    ports: 
+      - "9042:9042"
+    volumes:
+      - scylla-data:/var/lib/scylla
+volumes:
+  scylla-data:
+
+networks:
+  default:
+    name: database
+    external: true

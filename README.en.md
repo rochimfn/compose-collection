@@ -169,6 +169,11 @@ docker-compose down
 * connect
     * exposed ports: `8083`
 
+### `scylla`
+
+* scylla
+    * exposed ports: `9042`
+
 ### `superset`
 
 * superset
