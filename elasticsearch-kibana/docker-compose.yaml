@@ -37,7 +37,7 @@ services:
       ports:
         - 8200:8200
       volumes:
-        - ./apm-server.yml:/usr/share/apm-server/apm-server.yml
+        - ./apm-server.yml:/usr/share/apm-server/apm-server.yml:ro
       depends_on:
         - elasticsearch
       links:
