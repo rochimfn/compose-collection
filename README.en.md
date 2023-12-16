@@ -88,6 +88,11 @@ docker-compose down
 
 * exposed ports: `8888`
 
+### `livebook`
+
+* exposed ports (Web UI): `8080`
+* exposed ports: `8081`
+
 ### `mariadb`
 
 * exposed ports: `3306`

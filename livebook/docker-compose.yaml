@@ -1,0 +1,20 @@
+version: '3'
+services:
+  livebook:
+    image: ghcr.io/livebook-dev/livebook
+    restart: always
+    environment:
+      - LIVEBOOK_PASSWORD=passwordpassword
+    ports:
+      - "8080:8080"
+      - "8081:8081"
+    volumes:
+      - livebook-data:/data
+
+volumes:
+  livebook-data:
+
+networks:
+  default:
+    name: database
+    external: true

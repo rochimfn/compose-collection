@@ -89,6 +89,11 @@ docker-compose down
 
 * port diekspose: `8888`
 
+### `livebook`
+
+* port diekspose (Web UI): `8080`
+* port diekspose: `8081`
+
 ### `mariadb`
 
 * port diekspose: `3306`
