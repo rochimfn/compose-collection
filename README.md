@@ -209,6 +209,12 @@ docker-compose down
 
 * port diekspose: `9998`
 
+### `timescaledb`
+
+* port diekspose: `5432`
+* username: `postgres`
+* password: `password`
+
 ### `zeppelin`
 
 * port diekspose(server): `8080`

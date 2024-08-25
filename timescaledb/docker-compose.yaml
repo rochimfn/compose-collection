@@ -1,0 +1,19 @@
+services:
+  timescaledb:
+    image: timescale/timescaledb-ha:pg16
+    restart: always
+    ports: 
+      - "5432:5432"
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_PASSWORD=password
+    volumes:
+      - postgres-data:/home/postgres/pgdata/data
+volumes:
+  postgres-data:
+
+networks:
+  default:
+    name: database
+    external: true
+

@@ -209,6 +209,12 @@ docker-compose down
 
 * exposed ports: `9998`
 
+### `timescaledb`
+
+* exposed ports: `5432`
+* username: `postgres`
+* password: `password`
+
 ### `zeppelin`
 
 * exposed ports(server): `8080`
