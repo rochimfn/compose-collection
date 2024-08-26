@@ -85,6 +85,12 @@ docker-compose down
 * metastore
     * port diekspose: `9083`
 
+### `influxdb`
+
+* port diekspose: `8086`
+* username: `influx`
+* password: `password`
+
 ### `julia`
 
 * port diekspose: `8888`
