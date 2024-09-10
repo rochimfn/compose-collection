@@ -112,6 +112,10 @@ docker-compose down
 * username: `admin`
 * password: `password`
 
+### `mosquitto`
+
+* exposed ports: `1883`, `9001`
+
 ### `mssql`
 
 * exposed ports: `1433`

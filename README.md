@@ -113,6 +113,10 @@ docker-compose down
 * username: `admin`
 * password: `password`
 
+### `mosquitto`
+
+* port diekspose: `1883`, `9001`
+
 ### `mssql`
 
 * port diekspose: `1433`

@@ -1,0 +1,22 @@
+services:
+  mosquitto:
+    image: eclipse-mosquitto:2
+    restart: always
+    ports: 
+      - "1883:1883"
+      - "9001:9001"
+    volumes:
+      - ${PWD}/mosquitto.conf:/mosquitto/config/mosquitto.conf:ro
+      - mosquitto-data:/mosquitto/data
+      - mosquitto-log:/mosquitto/log
+
+volumes:
+  mosquitto-config:
+  mosquitto-data:
+  mosquitto-log:
+
+networks:
+  default:
+    name: database
+    external: true
+
