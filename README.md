@@ -154,6 +154,11 @@ docker-compose down
 * phpLDAPadmin
     * port diekspose: `6443`
 
+### `oracle`
+
+* port diekspose: `1521`
+* username: `SYS`, `SYSTEM` dan `PDBADMIN`
+* password: `password`
 
 ### `postgres`
 

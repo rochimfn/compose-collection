@@ -153,6 +153,11 @@ docker-compose down
 * phpLDAPadmin
     * exposed ports: `6443`
 
+### `mariadb`
+
+* exposed ports: `1521`
+* username: `SYS`, `SYSTEM` and `PDBADMIN`
+* password: `password`
 
 ### `postgres`
 

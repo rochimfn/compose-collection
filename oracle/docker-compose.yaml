@@ -1,0 +1,17 @@
+services:
+  db:
+    image: container-registry.oracle.com/database/free:latest
+    restart: always
+    ports: 
+      - "1521:1521"
+    environment:
+      ORACLE_PWD: password
+    volumes:
+      - oracle-data:/opt/oracle/oradata
+volumes:
+  oracle-data:
+
+networks:
+  default:
+    name: database
+    external: true
