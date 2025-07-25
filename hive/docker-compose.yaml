@@ -1,7 +1,7 @@
 version: '3'
 services:
   hiveserver2:
-    image: apache/hive:4.0.0-alpha-2
+    image: apache/hive:4.0.1
     restart: always
     ports: 
       - "10000:10000" 
@@ -16,7 +16,7 @@ services:
       - metastore
 
   metastore:
-    image: apache/hive:4.0.0-alpha-2
+    image: apache/hive:4.0.1
     restart: always
     ports:
       - "9083:9083"
@@ -26,6 +26,9 @@ services:
       SERVICE_OPTS: "-Djavax.jdo.option.ConnectionDriverName=org.postgresql.Driver -Djavax.jdo.option.ConnectionURL=jdbc:postgresql://pgmetastore:5432/metastore_db -Djavax.jdo.option.ConnectionUserName=hive -Djavax.jdo.option.ConnectionPassword=password"
     volumes:
       - hive-data:/opt/hive/data/warehouse
+      - type: bind
+        source: ./postgres.jar
+        target: /opt/hive/lib/postgres.jar
     depends_on: 
       - pgmetastore
 
