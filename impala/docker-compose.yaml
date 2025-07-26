@@ -1,0 +1,21 @@
+services:
+  impala:
+    image: apache/kudu:impala-latest
+    command: impala
+    restart: always
+    ports: 
+      - 21000:21000 
+      - 21050:21050 
+      - 25000:25000 
+      - 25010:25010 
+      - 25020:25020
+    volumes:
+      - impala-data:/var/lib/impala
+
+volumes:
+  impala-data:
+
+networks:
+  default:
+    name: database
+    external: true

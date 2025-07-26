@@ -78,11 +78,19 @@ docker-compose down
 * hiveserver2
     * exposed ports (hiveserver2): `10000`
     * exposed ports (hiveserver2 Web UI): `10002`
-    * jdbc: `jdbc:hive2://localhost:10000/root`
+    * jdbc: `jdbc:hive2://localhost:10000/`
     * beeline (docker): `docker exec -it hive-hiveserver2-1 beeline -u 'jdbc:hive2://localhost:10000/'`
     * beeline (eksternal): `beeline -u 'jdbc:hive2://localhost:10000/'`
 * metastore
     * port diekspose: `9083`
+
+### `impala`
+
+* port diekspose (Beeswax): `21000`
+* port diekspose (HiveServer2): `21050` 
+* port diekspose (Impala debug Web UI): `25000` 
+* port diekspose (StateStore debug Web UI): `25010` 
+* port diekspose (Catalog Server debug Web UI): `25020`
 
 ### `influxdb`
 

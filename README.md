@@ -85,6 +85,14 @@ docker-compose down
 * metastore
     * port diekspose: `9083`
 
+### `impala`
+
+* port diekspose (Beeswax): `21000`
+* port diekspose (HiveServer2): `21050` 
+* port diekspose (Impala debug Web UI): `25000` 
+* port diekspose (StateStore debug Web UI): `25010` 
+* port diekspose (Catalog Server debug Web UI): `25020`
+
 ### `influxdb`
 
 * port diekspose: `8086`
