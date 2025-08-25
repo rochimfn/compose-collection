@@ -167,6 +167,13 @@ docker-compose down
 * username: `SYS`, `SYSTEM` and `PDBADMIN`
 * password: `password`
 
+### `pgvector`
+
+* exposed ports: `5431`
+* username: `admin`
+* password: `password`
+* database: `postgres`
+
 ### `postgres`
 
 * pgadmin
