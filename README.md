@@ -168,6 +168,12 @@ docker-compose down
 * username: `SYS`, `SYSTEM` dan `PDBADMIN`
 * password: `password`
 
+### `oracle-xe11`
+
+* port diekspose: `1521`
+* username: `SYS` dan `SYSTEM`
+* password: `password`
+
 ### `pgvector`
 
 * port diekspose: `5431`

@@ -1,0 +1,17 @@
+services:
+  db:
+    image: gvenzl/oracle-xe:11
+    restart: unless-stopped
+    ports: 
+      - "1521:1521"
+    environment:
+      ORACLE_PASSWORD: password
+    volumes:
+      - oracle-volume:/u01/app/oracle/oradata
+volumes:
+  oracle-volume:
+
+networks:
+  default:
+    name: database
+    external: true
